@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "tennis_grand_slam_predictor"
+version = "0.0.1"
+description = "An algorithm that predicts the winner of each match in a grand slam and ultimately the winnerr"
+authors = [
+  { name = "Sachin Chhabria" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+requires-python = "~=3.12.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["tennis_grand_slam_predictor"]
+include = ["pyproject.toml", "tennis_grand_slam_predictor/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["tennis_grand_slam_predictor"]
+force-sort-within-sections = true
+
