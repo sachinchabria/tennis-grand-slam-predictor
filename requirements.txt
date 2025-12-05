@@ -13,4 +13,6 @@ ruff
 scikit-learn
 tqdm
 typer
+ipykernel
+seaborn
 -e .
